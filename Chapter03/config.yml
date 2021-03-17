@@ -1,0 +1,14 @@
+language: en
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: LanguageModelFeaturizer
+    model_name: "bert"
+    model_weights: "rasa/LaBSE"
+  - name: DIETClassifier
+    epochs: 100
+    learning_rate: 0.001
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100

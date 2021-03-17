@@ -1,0 +1,38 @@
+version: "2.0"
+nlu:
+  - intent: greet
+    examples: |
+      - Hello
+      - hello
+      - Hi
+      - hi
+  - intent: goodbye
+    examples: |
+      - ByeBye
+      - byebye
+      - bye
+      - Bye
+      - good bye
+      - exit
+  - intent: medicine
+    examples: |
+      - What medicine should I take if I have a [cold](disease)
+      - I am [constipated](disease), what medicine should I take?
+      - I have [stomachache](disease), what medicine should I take? 
+      - What kind of medicine is good for [sneezing all the time](disease)? 
+      - My parents have [high blood pressure](disease), what kind of medicine should I recommend them to take? 
+      - My head is hot and I feel [feverish](disease), what kind of medicine should I take
+      - Are there any good medicine recommendations for [weight loss](disease)? 
+  - intent: medical_department
+    examples: |
+      - Which department should I go to when I have a [cold](disease)? 
+      - I have [constipation](disease), which department should I go to? 
+      - Which department should I call if I keep [sneezing](disease)?
+      - Which department should I go to for [headaches](disease)? 
+  - intent: medical_hospital
+    examples: |
+      - Which hospital should I go to for my [stomachache](disease)? 
+      - I'm sick and don't know where to go to see a doctor 
+      - Are there any good hospitals or health centers to recommend for [weight loss](disease)? 
+      - Want to have a [physical examination](disease), don’t know which hospital is more affordable? 
+      - Parents have [high blood pressure](disease), which hospital is better to go to? 
