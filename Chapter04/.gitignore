@@ -1,0 +1,15 @@
+# for Dev
+*.db
+*.db-shm
+*.db-wal
+*.log
+*.json
+
+# for IDE
+.idea
+
+# for python
+__pycache__/*
+
+# for virtual env
+.venv

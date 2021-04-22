@@ -1,0 +1,44 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- goodbye
+- greet
+- weather
+- weather_address
+- weather_address_date-time
+- weather_date-time
+entities:
+- address
+- date-time
+slots:
+  address:
+    type: text
+  date-time:
+    type: text
+  matches:
+    type: unfeaturized
+responses:
+  utter_greet:
+  - text: 你好，请说出需要提供天气预测服务的地点和时间
+  utter_working_on_it:
+  - text: 正在查询中，请稍后 ...
+  utter_goodbye:
+  - text: 再见！
+  utter_ask_address:
+  - text: 哪里呢？
+  utter_ask_date-time:
+  - text: 什么时候？
+  utter_report_weather:
+  - text: '{matches}'
+  utter_default:
+  - text: 系统不明白您说的话
+actions:
+- action_report_weather
+- utter_ask_address
+- utter_ask_date-time
+- utter_goodbye
+- utter_greet
+- utter_report_weather
+- utter_working_on_it
+- utter_default
