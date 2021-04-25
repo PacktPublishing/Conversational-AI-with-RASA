@@ -1,41 +1,48 @@
 import datetime
-from typing import Optional
+from typing import Optional, Tuple
+
+from pyowm.owm import OWM
+
+reg = OWM("not-actually-used-key").city_id_registry()
+
+
+def text_to_coordinate(text_city: str) -> Tuple[float, float]:
+    """parse city name to coordinate
+
+    return latitude, longitude
+    """
+
+    list_of_locations = reg.locations_for(text_city)
+
+    # select the first one (maybe incorrect)
+    city = list_of_locations[0]
+
+    return city.lat, city.lon
 
 
 def text_to_date(text_date: str) -> Optional[datetime.date]:
-    """
-    convert text based date info into datatime object
+    """convert text based date info into datetime object
+
+    if the convert is not supported, it will return None
     """
 
     today = datetime.datetime.now()
     one_more_day = datetime.timedelta(days=1)
 
-    if text_date == "今天":
+    if text_date == "today":
         return today.date()
-    if text_date == "明天":
+    if text_date == "tomorrow":
         return (today + one_more_day).date()
-    if text_date == "后天":
+    if text_date == "the day after tomorrow":
         return (today + one_more_day * 2).date()
 
-    # Not supported by weather API provider freely
-    if text_date == "大后天":
-        # return 3
-        return (today + one_more_day * 3).date()
-
-    if text_date.startswith("星期"):
-        # TODO: using calender to compute relative date
-        # not support yet
+    # not supported
+    if text_date in ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]:
         return None
 
-    if text_date.startswith("下星期"):
-        # TODO: using calender to compute relative date
-        # not support yet
+    # not supported
+    if text_date in ["yesterday"]:
         return None
 
-    # follow APIs are not supported by weather API provider freely
-    if text_date == "昨天":
-        return None
-    if text_date == "前天":
-        return None
-    if text_date == "大前天":
-        return None
+    # anything else
+    return None

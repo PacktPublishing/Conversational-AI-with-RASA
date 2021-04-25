@@ -9,19 +9,16 @@ from service.weather import get_text_weather_date
 from service.normalization import text_to_date
 
 
-class ActionReportWeather(Action):
-    def __init__(self):
-        pass
-
+class WeatherFormAction(FormAction):
     def name(self) -> Text:
-        return "action_report_weather"
+        return "weather_form"
 
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[Dict[Text, Any]]:
+    def required_slots(self, tracker: Tracker) -> List[Text]:
+        return ["address", "date-time"]
+
+    def submit(
+        self, dispatch: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
+    ) -> List[Dict]:
         city = tracker.get_slot("address")
         date_text = tracker.get_slot("date-time")
 
@@ -29,12 +26,15 @@ class ActionReportWeather(Action):
 
         if not date_object:  # parse date_time failed
             msg = "暂不支持查询 {} 的天气".format([city, date_text])
-            return [SlotSet("matches", msg)]
+            dispatch.utter_message(msg)
         else:
+            dispatch.utter_message(templete="utter_working_on_it")
             try:
                 weather_data = get_text_weather_date(city, date_object, date_text)
             except Exception as e:
-                raise
-                weather_data = str(e)
+                exec_msg = str(e)
+                dispatch.utter_message(exec_msg)
+            else:
+                dispatch.utter_message(weather_data)
 
-            return [SlotSet("matches", "{}".format(weather_data))]
+        return []

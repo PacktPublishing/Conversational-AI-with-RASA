@@ -1,162 +1,202 @@
 ## intent:goodbye
-- 拜拜
-- 再见
-- 拜
-- 退出
-- 结束
+- Bye
+- Goodbye
+- exit
+- stop
 
 ## intent:greet
-- 你好
-- 您好
+- Hello there
 - Hello
 - hello
 - Hi
 - hi
-- 喂
-- 在么
+- Hey
+- Are you there?
 
 ## intent:weather
-- 用着摄氏度显示天气
-- 天气
-- 我需要不需要雨裤
-- 我该穿外套吗
-- 去外边要穿外衣吗
-- 去外边要带夹克吗
-- 外边需要雨伞吗
-- 天气是不是很凉快
-- 我最近的天气是不是很冷
-- 摄氏度天气预报
-- 天气很冷
-- 天气会不会很热
-- 天气会很温和吗
-- 为什么天气那么寒冷
+- Display the weather in degrees Celsius
+- the weather
+- I need rain pants or not
+- Should I wear a coat
+- Do I need to wear a coat outside?
+- Should I bring a jacket outside?
+- Do you need an umbrella outside
+- Is the weather very cool?
+- Is it cold recently?
+- Celsius weather forecast
+- The weather is cold
+- Will it be very hot?
+- Will the weather be mild
+- Why is the weather so cold
+- [Beijing](address) Will it be rainy
+- [Shanghai](address) what's the weather
+- I'm sorry to check the weather in [Hong Kong](address) for me
+- [Berlin](address) what weather
+- [Shanghai](address) how hot
+- [Tokyo](address) temperature
+- [San Francisco](address) degrees
+- [Shanghai](address) what temperature
+- [San Francisco](address) now how many degrees
+- Weather in [Shanghai](address)
+- How is the weather in [Shanghai](address)
+- What's the weather like in [Shanghai](address)?
+- [Capital] (address) weather
+- How is the weather in [capital](address)
+- Weather for [Big Apple](address)
+- What's the weather like on [Big Apple](address)
+- I want the weather of [Shanghai](address)[tomorrow](date-time)
+- I want the weather of [Shanghai](address)[after day](date-time)
+- [Shanghai](address)[Tomorrow](date-time) weather
+- [Shanghai](address)[yesterday](date-time) weather
+- [Shanghai](address)[the day before yesterday](date-time) weather
+- [Shanghai](address)[the day after tomorrow](date-time) weather
+- [Next Friday](date-time) at [New York](address)
+- [Tomorrow](date-time) is in [Beijing](address)
+- [Cairo](address)[Five days later](date-time)
+- [Next Monday](date-time) is in [Beijing](address)
+- [Today](date-time) is in [Seoul](address)
+- [Tokyo](address)[tomorrow](date-time)
+- Also [Next Sunday](date-time) in [Seoul](address)
+- About [two days later](date-time) in [Shanghai](address)
+- [Three days later](date-time) is in [Seoul](address)
+- [Three days later](date-time)[Mumbai](address) Is it cloudy?
+- [October 3rd](date-time)[Cairo](address) Will it rain?
+- [Tomorrow](date-time)[Tokyo](address) weather
+- [Today](date-time)[Tokyo](address) What's the weather like
+- [Three days later](date-time)[Tokyo](address) weather
+- What is the weather like in [Beijing](address)[today](date-time)
+- [Mumbai] (address) [today] (date-time) how is the weather
+- [Next Friday](date-time)[Tokyo](address) Is the weather fine?
+- [Today](date-time)[Tokyo](address) how is the weather
+- [Today](date-time)[Shanghai](address)'s weather
+- [Two days ago](date-time)[Shanghai](address) What was the weather like
+- [Today](date-time)[Tokyo](address) What's the weather like
+- [Tomorrow](date-time)[Beijing](address) I need a raincoat or not
+- [Next Sunday](date-time)[Beijing](address) Do I need a woolen hat outside?
+- [Today](date-time)[Beijing](address) Do I need wool socks when I go outside?
+- [March 5th](date-time)[Beijing](address) Should I wear a coat when I go outside?
+- [Next Friday](date-time) Do I need to bring an umbrella in [Berlin](address)
+- [Shanghai](address)[Three days later](date-time) how many degrees
+- [Tomorrow](date-time)[Shanghai](address) What is the temperature
+- [Today](date-time)[Shanghai](address) What's the temperature
+- [Tomorrow](date-time)[New York](address) Is it cold recently?
+- Why is the weather so cool in [Next Monday](date-time)[New York](address)
+- Will it be hot in [Next Sunday](date-time)[New York](address)
+- [Capital](address)[Tomorrow](date-time) weather
+- [Big Apple](address)[afternoon](date-time) weather
+- How is the weather in [capital](address)[tomorrow](date-time)
+- [Big Apple](address)[afternoon](date-time) how is the weather
+- [Today] (date-time) How is the weather in Taichung?
+- You know [now] (date-time) is it cold outside
+- I still want to [January 1st] (date-time)
+- Will it rain later [night](date-time)
+- [Today](date-time) will it be sunny?
+- [Yesterday] (date-time) how many degrees
+- [9/4](date-time) How is the weather
+- [Tomorrow] (date-time) how much Celsius the weather is
+- [Today] (date-time) weather
+- [Yesterday] (date-time) what weather
+- [Tomorrow] (date-time) Do you want gloves?
+- [Today] (date-time) Do you want to wear a thin sweater outside?
+- [Tomorrow] (date-time) Should I bring an umbrella outside?
+- [Two days later] (date-time) I need rain pants or not
+- [Next Monday] Do you need sunglasses outside (date-time)
+- [Tomorrow] (date-time) will the weather be mild
+- [Today] (date-time) The weather is very hot
+- [Two days later] Will it be cold on (date-time)?
+- [Tomorrow] Is it warm on (date-time)?
 
-## intent:weather_address
-- 告诉我在[广州](address)怎么样
-- 告诉我在[广州](address)
-- 在[辽宁](address)呢
-- 在[北京](address)呢
-- 如何[厦门](address)
-- 还在[武汉](address)呢
-- 在[香港](address)呢
-- 在[杭州](address)
-- 还在[上海](address)
-- 还在[宁波](address)
-- [北京](address)里面会不会阴雨
-- [上海](address)什么天气
-- 不好意思可以帮我查[香港](address)的天气
-- [厦门](address)啥天气
-- [上海](address)多热
-- [台北市](address)温度
-- [台南市](address)南区几度
-- [上海](address)啥温度
-- [台南市南区](address)现在几度
-- [上海](address)的天气
-- [上海](address)的天气怎么样
-- [上海](address)的天气怎么样？
-- [首都](address)的天气
-- [首都](address)的天气怎么样
-- [魔都](address)的天气
-- [魔都](address)的天气怎么样
+## intent:info_date
+- [Tomorrow] (date-time)
+- [The day after tomorrow](date-time)
+- How can [Next Sunday] (date-time)
+- [Yesterday] (date-time) is also needed
+- I also want [yesterday] (date-time)
+- [Tomorrow] (date-time) how
+- [Hou Tian] (date-time) how
+- [Saturday] (date-time)
+- [The day after tomorrow] (date-time)
+- Now [tomorrow] (date-time)
+- About [two days later](date-time)
+- Will it be [the day before yesterday] (date-time)
+- Also [three days ago] (date-time)
+- Can you [Next Friday] (date-time)
+- Also [tomorrow] (date-time)
 
-## intent:weather_address_date-time
-- 我要[上海](address)[明天](date-time)的天气
-- 我要[上海](address)[后天](date-time)的天气
-- [上海](address)[明天](date-time)的天气
-- [上海](address)[昨天](date-time)的天气
-- [上海](address)[前天](date-time)的天气
-- [上海](address)[后天](date-time)的天气
-- [下个星期五](date-time)在[南京](address)
-- [明天](date-time)在[北京](address)
-- [沈阳](address)[五天后](date-time)
-- [下星期一](date-time)在[北京](address)呢
-- [今天](date-time)在[天津](address)
-- [青岛](address)[明天](date-time)
-- 还要[下星期日](date-time)在[苏州](address)
-- 关于[两天后](date-time)在[上海](address)
-- [三天后](date-time)在[武汉](address)呢
-- [三天后](date-time)[杭州](address)多云吗
-- [十月三号](date-time)[沈阳](address)会下雨吗
-- [明天](date-time)[台北](address)天气
-- [今天](date-time)[台北](address)的天气如何
-- [三天后](date-time)[台北](address)的天气
-- [北京](address)[今天](date-time)的天气如何
-- [杭州](address)[今天](date-time)的天气怎么样
-- [下个星期五](date-time)[台北](address)是不是天气好吗
-- [今天](date-time)[台北](address)天气如何
-- [今天](date-time)[上海](address)的天气
-- [两天前](date-time)[上海](address)的天气如何
-- [今天](date-time)[台北市](address)的天气如何
-- [明天](date-time)[北京](address)我需要不需要雨衣
-- [下星期日](date-time)[北京](address)外边需要毛线帽吗
-- [今天](date-time)[北京](address)去外边要带羊毛袜吗
-- [三月五号](date-time)[北京](address)去外边要穿外衣吗
-- [下个星期五](date-time)我在[厦门](address)需要带伞吗
-- [上海](address)[三天后](date-time)多少度
-- [明天](date-time)[上海](address)的温度如何
-- [今天](date-time)[上海](address)的气温如何
-- [明天](date-time)[马来西亚](address)最近的天气是不是很冷
-- 为什么[下星期一](date-time)[马来西亚](address)天气那么凉快
-- [下星期日](date-time)[马来西亚](address)的天气会很热吗
-- [首都](address)[明天](date-time)的天气
-- [魔都](address)[下午](date-time)的天气
-- [首都](address)[明天](date-time)的天气怎么样
-- [魔都](address)[下午](date-time)的天气怎么样
+## intent:info_address
+- Tell me how about [Rome](address)
+- Tell me at [Rome](address)
+- In [Seoul](address)
+- In [Beijing](address)
+- How to [Berlin](address)
+- Still in [Seoul](address)
+- In [Hong Kong](address)
+- At [Mumbai](address)
+- Still in [Shanghai](address)
+- Still in [Ningbo](address)
+- [Ningbo](address)
+- [Capital](address)
 
+## intent:affirm
+- Yes
+- Yes it is
+- no problem
+- it is good
+- Ok
+- Yes
+- very good
+- That's right
+- carry on
+- Nothing wrong
+- Get up
 
-## intent:weather_date-time
-- [今天](date-time)台中天气如何
-- 你知道[现在](date-time)外面冷不冷
-- 怎么能[下个星期日](date-time)
-- 还需要[昨天](date-time)
-- 我还要[昨天](date-time)
-- [明天](date-time)
-- [后天](date-time)
-- 我还很想[一月一号](date-time)
-- [明天](date-time)如何
-- [后天](date-time)如何
-- [星期六](date-time)呢
-- [后天](date-time)呢
-- 现在[明天](date-time)
-- 关于[两天后](date-time)
-- 会不会[前天](date-time)
-- 还要[三天前](date-time)
-- 能不能[下星期五](date-time)
-- 还要[明天](date-time)
-- 稍后[晚上](date-time)会下雨吗
-- [今天](date-time)会不会晴朗吗
-- [昨天](date-time)几度
-- [9/4](date-time)天气如何
-- [明天](date-time)天气多少摄氏度
-- [今天](date-time)天气
-- [昨天](date-time)什么天气
-- [明天](date-time)要不要手套
-- [今天](date-time)去外边要穿薄毛衣吗
-- [明天](date-time)去外边要带雨伞吗
-- [两天后](date-time)我需要不需要雨裤
-- [下星期一](date-time)外边需要墨镜吗
-- [明天](date-time)的天气会很温和吗
-- [今天](date-time)天气很热耶
-- 就让你问他[今天](date-time)天气几度
-- [两天后](date-time)的天气会不会很寒冷吗
-- [明天](date-time)的天气是不是很暖吗
+## intent:deny
+- Do not
+- no
+- Forget it
+- No more
+- No
 
-## synonym:下个星期一
-- 下星期一
+## intent:stop
+- Idiot
+- Silly
+- stupid
+- No more
+- stop
+- Shut up
+- Stop
 
-## synonym:今天
-- 早上
-- 中午
-- 晚上
-- 下午
-- 傍晚
-- 今日
+## synonym: Today
+- Morning
+- Noon
+- Night
+- in the afternoon
+- In the evening
+- Today
 
-## synonym:明天
-- 明日
+## synonym:Beijing
+- Capital
 
-## synonym:北京
-- 首都
+## synonym: New York
+- Big Apple
 
-## synonym:上海
-- 魔都
+## lookup:cities
+table_data/cities.txt
+
+## intent:chitchat/whoyouare
+- who are you
+- who are you?
+- what's your name
+- what's your name?
+- Introduce yourself
+
+## intent:chitchat/whatyoucando
+- What can you do
+- What can you do?
+- what can you do
+- what can you do?
+- What can you do?
+- What skills do you have
+- What skills do you have?
+- What is your skill
+- What are your skills
