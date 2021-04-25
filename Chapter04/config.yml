@@ -1,0 +1,22 @@
+language: zh
+pipeline:
+  - name: HFTransformersNLP
+    model_name: bert
+    model_weights: bert-base-chinese
+  - name: LanguageModelTokenizer
+  - name: LanguageModelFeaturizer
+  - name: RegexFeaturizer
+  - name: DIETClassifier
+    epochs: 1000
+    learning_rate: 0.001
+    tensorboard_log_directory: ./tensorboard_log
+  - name: ResponseSelector
+    epochs: 1000
+    learning_rate: 0.001
+  - name: EntitySynonymMapper
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+  - name: MappingPolicy
+  - name: FormPolicy
+  - name: FallbackPolicy

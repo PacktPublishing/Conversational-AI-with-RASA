@@ -1,0 +1,15 @@
+language: "zh"
+
+pipeline:
+  - name: "MitieNLP"
+    model: "bin_data/total_word_feature_extractor.dat"
+  - name: "JiebaTokenizer"
+  - name: "MitieEntityExtractor"
+  - name: "EntitySynonymMapper"
+  - name: "MitieFeaturizer"
+  - name: "SklearnIntentClassifier"
+ 
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+  - name: MappingPolicy

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo for 天气预报查询机器人</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105150423-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-105150423-3');
+    </script>
+    <!-- /Global site tag (gtag.js) - Google Analytics -->
+
+    <script src="showdown.min.js"></script>
+
+    <!-- markdown style -->
+    <link rel="stylesheet" href="github-markdown.css">
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
+    <!-- /markdown style -->
+</head>
+
+<body>
+    <textarea id="markdown-source" style="visibility: hidden;">
+# Demo for 天气预报查询机器人
+
+## 源代码地址
+
+[https://github.com/howl-anderson/WeatherBot](https://github.com/howl-anderson/WeatherBot)
+
+## 功能
+这个机器人可以根据你提供的城市（北京、上海等）和日期（明天、后天等），查询出相应的天气预报。
+
+## 特性
+使用 Frame-based 对话管理方案，如果上述两个 Slot (既城市和天气)，有任意一个用户未提供，对话管理系统会负责让你澄清相关 Slot 的值。
+
+## 能力范围
+* 受限于天气数据提供方的能力，这个机器人只能查询 **中国大陆地区市级城市** 三天以内 **（今天，明天，后天）** 的气象数据，**不能查询过去**（昨天，前天）等历史数据。
+* 受限于开发时间，这个机器人 **不提供** 诸如 **这个星期五、下个星期一** 这种需要计算才能得到日期给定方式。也 **不能提供** 诸如 **绝对日期：三月一号、六一儿童节日** 这种日期的查询能力。
+* 因为使用的是免费的天气查询接口，所以 **会有配额限制**，可能会因为 **超出调用次数** ，而在一个小时内不能用。同时网络查询接口可能存在不稳定因素，导致 **没有结果返回或者出现异常**，**尝试多次重新发送请求可解决问题**。
+
+## 在线演示
+见页面右下方的蓝色的聊天widget，点击即可使用
+
+## 作者
+
+Xiaoquan Kong ([https://github.com/howl-anderson](https://github.com/howl-anderson))
+    </textarea>
+    <article id="markdown-rendered" class="markdown-body" />
+    <script>
+        function run() {
+            var text = document.getElementById('markdown-source').value,
+                target = document.getElementById('markdown-rendered'),
+                converter = new showdown.Converter(),
+                html = converter.makeHtml(text);
+
+            target.innerHTML = html;
+        };
+
+        run();
+    </script>
+
+
+    <div id="webchat" />
+    <script src="webchat.js"></script>
+    <script>
+        WebChat.default.init({
+            selector: "#webchat",
+            initPayload: "你好",
+            interval: 1000, // 1000 ms between each message
+            customData: {
+                "userId": "123"
+            }, // arbitrary custom data. Stay minimal as this will be added to the socket
+            socketUrl: "http://127.0.0.1:{{port}}",
+            socketPath: "/socket.io/",
+            title: "天气预报查询",
+            subtitle: "Demo",
+            showCloseButton: true,
+            fullScreenMode: false
+        })
+    </script>
+</body>
+
+</html>
