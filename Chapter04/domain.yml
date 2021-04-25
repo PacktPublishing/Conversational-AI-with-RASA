@@ -2,18 +2,17 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- goodbye
-- greet
-- weather
-- chitchat
-- deny
-- stop
-- affirm
-- info_date
-- info_address
+  - goodbye
+  - greet
+  - weather
+  - deny
+  - stop
+  - affirm
+  - info_date
+  - info_address
 entities:
-- address
-- date-time
+  - address
+  - date-time
 slots:
   address:
     type: unfeaturized
@@ -23,24 +22,21 @@ slots:
     auto_fill: false
 responses:
   utter_greet:
-  - text: 你好，请说出需要提供天气预测服务的地点和时间
+    - text: Hello, please tell us where and when we need to provide weather forecast services
   utter_goodbye:
-  - text: 再见！
+    - text: Goodbye!
   utter_ask_address:
-  - text: 哪里呢？
+    - text: Where?
   utter_ask_date-time:
-  - text: 什么时候？
-  utter_ask_continue:
-  - text: 是否要继续？
+    - text: When?
   utter_default:
-  - text: 系统不明白您说的话
+    - text: Sorry, The system does not understand what you are saying
 actions:
-- utter_ask_address
-- utter_ask_date-time
-- utter_goodbye
-- utter_greet
-- utter_ask_continue
-- utter_default
-- respond_chitchat
+  - utter_ask_address
+  - utter_ask_date-time
+  - utter_goodbye
+  - utter_greet
+  - utter_ask_continue
+  - utter_default
 forms:
-- weather_form
+  - weather_form
