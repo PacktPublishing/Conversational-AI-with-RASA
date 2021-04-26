@@ -1,0 +1,27 @@
+version: "2.0"
+stories:
+  - story: greet
+    steps:
+      - intent: greet
+      - action: utter_greet
+  - story: say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+rules:
+  - rule: activate restaurant form
+    steps:
+      - intent: weather
+      - action: weather_form
+      - active_loop: weather_form
+  - rule: Submit form
+    condition:
+      # Condition that form is active.
+      - active_loop: weather_form
+    steps:
+      - action: weather_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      # The action we want to run when the form is submitted.
+      - action: action_weather_form_submit

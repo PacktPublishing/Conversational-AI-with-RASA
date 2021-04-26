@@ -5,9 +5,6 @@ intents:
   - goodbye
   - greet
   - weather
-  - deny
-  - stop
-  - affirm
   - info_date
   - info_address
 entities:
@@ -15,11 +12,15 @@ entities:
   - date-time
 slots:
   address:
-    type: unfeaturized
+    type: text
     auto_fill: false
+    influence_conversation: false
   date-time:
-    type: unfeaturized
+    type: text
     auto_fill: false
+    influence_conversation: false
+  requested_slot:
+    type: any
 responses:
   utter_greet:
     - text: Hello, please tell us where and when we need to provide weather forecast services
@@ -36,7 +37,13 @@ actions:
   - utter_ask_date-time
   - utter_goodbye
   - utter_greet
-  - utter_ask_continue
   - utter_default
+  - action_weather_form_submit
 forms:
-  - weather_form
+  weather_form:
+    address:
+      - entity: address
+        type: from_entity
+    date-time:
+      - entity: date-time
+        type: from_entity
