@@ -1,0 +1,21 @@
+version: "2.0"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - goodbye
+  - greet
+  - faq
+responses:
+  utter_greet:
+    - text: Hello, I’m Silly, I’m a Rasa-based FAQ robot
+  utter_goodbye:
+    - text: Goodbye!
+  utter_default:
+    - text: The system does not understand what you are saying
+actions:
+  - utter_goodbye
+  - utter_greet
+  - utter_default
+  - utter_faq

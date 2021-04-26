@@ -1,0 +1,56 @@
+version: "2.0"
+nlu:
+  - intent: goodbye
+    examples: |
+      - Bye
+      - Goodbye
+  - intent: greet
+    examples: |
+      - Hello there
+      - Hello
+      - Hi
+      - hi
+      - Hey
+      - Are you there?
+  - intent: faq/notes
+    examples: |
+      -What are the precautions for applying for the company's campus recruitment position?
+  - intent: faq/work_location
+    examples: |
+      -Where is the main work location of fresh graduates admitted to campus recruitment?
+  - intent: faq/max_job_request
+    examples: |
+      -How many positions can I apply for at most?
+  - intent: faq/audit
+    examples: |
+      -Description of each stage of the audit
+  - intent: faq/write_exam_participate
+    examples: |
+      -How to take the written test?
+  - intent: faq/write_exam_location
+    examples: |
+      -How to arrange the location of the written test?
+  - intent: faq/write_exam_again
+    examples: |
+      -Is there only one written test? I didn't take part in the written test on the day. Is there any chance for another written test?
+  - intent: faq/write_exam_with-out-offer
+    examples: |
+      -If I have not received the written examination notice, but I want to enter the company, can I directly enter the examination room to take the examination?
+  - intent: faq/interview_arrangement
+    examples: |
+      -When does the interview start? How many days in advance will the interview schedule be notified?
+  - intent: faq/interview_times
+    examples: |
+      -How many interviews are usually scheduled?
+  - intent: faq/interview_from
+    examples: |
+      -What is the format of the interview? Is it an individual interview or a group interview?
+  - intent: faq/interview_clothing
+    examples: |
+      -What are the specific requirements for the clothing for the interview?
+  - intent: faq/interview_paperwork
+    examples: |
+      -What documents do I need to bring to the interview?
+  - intent: faq/interview_result
+    examples: |
+      -How to check the interview result?

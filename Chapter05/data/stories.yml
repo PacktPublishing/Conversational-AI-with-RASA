@@ -1,0 +1,14 @@
+version: "2.0"
+stories:
+  - story: greet
+    steps:
+      - intent: greet
+      - action: utter_greet
+  - story: Weather only path
+    steps:
+      - intent: faq
+      - action: utter_faq
+  - story: say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
