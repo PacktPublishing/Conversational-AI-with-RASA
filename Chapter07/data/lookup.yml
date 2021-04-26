@@ -1,0 +1,54 @@
+version: "2.0"
+nlu:
+  - lookup: cities
+    examples: |
+      - London
+      - New York
+      - Beijing
+      - Dubai
+      - Hong Kong
+      - Paris
+      - Shanghai
+      - Singapore
+      - Tokyo
+      - Amsterdam
+      - Brussels
+      - Chicago
+      - Frankfurt
+      - Jakarta
+      - Kuala Lumpur
+      - Los Angeles
+      - Madrid
+      - Mexico City
+      - Milan
+      - Moscow
+      - Mumbai
+      - São Paulo
+      - Sydney
+      - Toronto
+      - Bangkok
+      - Bangalore
+      - Boston
+      - Buenos Aires
+      - Dublin
+      - Guangzhou
+      - Istanbul
+      - Johannesburg
+      - Lisbon
+      - Luxembourg City
+      - Manila
+      - Melbourne
+      - Montreal
+      - Munich
+      - New Delhi
+      - Prague
+      - Riyadh
+      - San Francisco
+      - Santiago
+      - Seoul
+      - Shenzhen
+      - Stockholm
+      - Taipei
+      - Vienna
+      - Warsaw
+      - Zürich

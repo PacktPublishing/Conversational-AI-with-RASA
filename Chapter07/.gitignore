@@ -1,0 +1,6 @@
+events.db*
+rasa.db
+models/
+tensorboard_log/*
+__pycache__
+.idea/

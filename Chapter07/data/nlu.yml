@@ -1,0 +1,66 @@
+version: "2.0"
+nlu:
+  - intent: goodbye
+    examples: |
+      - Bye
+      - Goodbye
+  - intent: greet
+    examples: |
+      - Hello there
+      - Hello
+      - Hi
+      - hi
+      - Hey
+      - Are you there?
+  - intent: affirm
+    examples: |
+      - it is good
+      - no problem
+      - OK
+      - Yes
+      - Yes it is
+  - intent: deny
+    examples: |
+      - Don't
+      - No need to
+      - Not required
+      - Do not
+      - NO
+      - do not
+  - intent: info_date
+    examples: |
+      - [Tomorrow](date)
+      - [Today](date)
+      - [Evening](date)
+      - [PM](date)
+  - intent: info_city
+    examples: |
+      - [Los Angeles](city)
+      - [New York](city)
+      - [London](city)
+      - [Madrid](city)
+  - intent: book_ticket
+    examples: |
+      - Help me book the ticket
+      - Book me a ticket
+      - Help me book a ticket for departure from [San Francisco]{"entity": "city", "role": "departure"}
+      - Help me book a ticket from [New York]{"entity": "city", "role": "departure"}
+      - Help me book a ticket from [Paris]{"entity": "city", "role": "departure"}
+      - Help me book a ticket from [Paris]{"entity": "city", "role": "departure"} to [Madrid]{"entity": "city", "role": "destination"}
+      - Help me order one from [Tomorrow](date) [New York]{"entity": "city", "role": "departure"} to [Berlin]{"entity": "city", "role": " destination"}'s ticket
+      - Order me a [Tomorrow](date) [San Francisco]{"entity": "city", "role": "departure"} to [London]{"entity": "city", "role": " destination"}'s ticket
+      - Help me order a [Tomorrow](date) [Berlin]{"entity": "city", "role": "departure"} to [Paris]{"entity": "city", "role": " destination"}'s ticket
+      - Book me a ticket for [tomorrow](date)
+      - Help me book a ticket to [Madrid]{"entity": "city", "role": "destination"}
+      - Book me a ticket to [London]{"entity": "city", "role": "destination"}
+      - Help me book a ticket departing from [Los Angeles]{"entity": "city", "role": "departure"}
+      - Book me a ticket to [Berlin]{"entity": "city", "role": "destination"}
+  - synonym: today
+    examples: |
+      - Morning
+      - Noon
+      - Night
+      - in the afternoon
+      - In the evening
+      - Today
+
