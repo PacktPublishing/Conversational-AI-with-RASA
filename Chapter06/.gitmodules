@@ -1,0 +1,3 @@
+[submodule "rasa_web_client"]
+	path = rasa_web_client
+	url = git@github.com:howl-anderson/rasa_web_client.git

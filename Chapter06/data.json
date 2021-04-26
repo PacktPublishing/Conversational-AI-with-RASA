@@ -1,0 +1,58 @@
+{
+  "song": [
+    {
+      "id": 0,
+      "name": "Billie Jean",
+      "singer": "Michael Jackson",
+      "album": "Thriller",
+      "style": "Rock"
+    },
+    {
+      "id": 1,
+      "name": "Like a Rolling Stone",
+      "singer": "Bob Dylan",
+      "album": "Highway 61 Revisited",
+      "style": "Rock"
+    },
+    {
+      "id": 2,
+      "name": "The Shape of My Heart",
+      "singer": "Sting",
+      "album": "Ten Summoner's Tales",
+      "style": "pop，rock"
+    },
+    {
+      "id": 3,
+      "name": "Poker Face",
+      "singer": "Lady Gaga",
+      "album": "The Fame",
+      "style": "dance-pop"
+    }
+  ],
+  "singer": [
+    {
+      "id": 0,
+      "name": "Bob Dylan",
+      "gender": "male",
+      "birthday": "1941/05/24"
+    },
+    {
+      "id": 1,
+      "name": "Michael Jackson",
+      "gender": "male",
+      "birthday": "1958/08/29"
+    },
+    {
+      "id": 2,
+      "name": "Lady Gaga",
+      "gender": "female",
+      "birthday": "1986/03/28"
+    },
+    {
+      "id": 3,
+      "name": "Sting",
+      "gender": "male",
+      "birthday": "1951/10/02"
+    }
+  ]
+}
