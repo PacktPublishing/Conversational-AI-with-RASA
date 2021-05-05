@@ -9,11 +9,11 @@ intents:
   - faq
 responses:
   utter_greet:
-    - text: Hello, I’m Silly, I’m a Rasa-based FAQ robot
+    - text: Hello, I’m Silly. I’m a Rasa-based FAQ robot. I can help you with answering questions about the recruitment of fresh graduates for the company.
   utter_goodbye:
     - text: Goodbye!
   utter_default:
-    - text: The system does not understand what you are saying
+    - text: The system does not understand what you are saying.
 actions:
   - utter_goodbye
   - utter_greet

@@ -8,8 +8,9 @@ pipeline:
   - name: "DIETClassifier"
     epochs: 100
     learning_rate: 0.001
-  - name: "ResponseSelector"
+  - name: ResponseSelector
 
 policies:
   - name: MemoizationPolicy
   - name: TEDPolicy
+  - name: RulePolicy

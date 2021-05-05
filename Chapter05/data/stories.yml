@@ -4,10 +4,6 @@ stories:
     steps:
       - intent: greet
       - action: utter_greet
-  - story: Weather only path
-    steps:
-      - intent: faq
-      - action: utter_faq
   - story: say goodbye
     steps:
       - intent: goodbye
