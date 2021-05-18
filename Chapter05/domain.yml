@@ -9,11 +9,39 @@ intents:
   - faq
 responses:
   utter_greet:
-    - text: Hello, I’m Silly. I’m a Rasa-based FAQ robot. I can help you with answering questions about the recruitment of fresh graduates for the company.
+    - text: Hello, I’m Silly. I’m a Rasa-based FAQ robot. I can help you with answering questions about the recruitment of fresh graduates for The Silly Company.
   utter_goodbye:
     - text: Goodbye!
   utter_default:
     - text: The system does not understand what you are saying.
+  utter_faq/notes:
+    - text: 1. The job information listed in the campus recruitment section is only applicable to the recruitment of fresh graduates. Please go to the campus recruitment section to find the position you are interested in. 2. The requirements of each position listed are the minimum requirements of the position. In order to ensure the success rate of your application, we hope that you will consider your choice strictly in accordance with the requirements of the position. 3. After the submission is successful, you will not be able to modify or submit your resume again before the end of the recruitment. Therefore, please submit your resume after confirming the information carefully.
+  utter_faq/work_location:
+    - text: Recruitment information contains the content of the job location of each position, please refer to the detailed introduction of the content of each position.
+  utter_faq/max_job_request:
+    - text: For campus recruitment, you can apply for up to 2 positions.
+  utter_faq/audit:
+    - text: "1. Resume review: Candidates need to fill in and submit their resumes through the company's website, and the company's recruiters will carefully review and screen the received resumes. Understand the applicant's situation, and screen out the resumes that meet the job requirements, and at the same time confirm whether the contents of the resume are true. 2. Written examination review: Our company's technical tests are mainly aimed at checking and evaluating the professional skills of candidates. 3. Interview review: After the implementation of the first-stage interview to evaluate the basic quality of the applicant and the second-stage interview to evaluate the professional knowledge, an objective comprehensive evaluation is made on whether the applicant conforms to the company's talent concept and the applicant's work ability, and then the decision is made Whether to hire the applicant."
+  utter_faq/write_exam_participate:
+    - text: Applicants who have passed the resume review, we will inform you by SMS, e-mail, company bulletin board and telephone notification
+  utter_faq/write_exam_location:
+    - text: The location of the written test will be arranged according to the city where the school is located in your resume
+  utter_faq/write_exam_again:
+    - text: The large-scale written examination for campus recruitment is only arranged once. Please take the written examination opportunity seriously for students who have received the written examination notice.
+  utter_faq/write_exam_with-out-offer:
+    - text: Since we have selected the written examination list according to strict recruitment process, we are very sorry. For students who have not received the written examination notification, they cannot participate in the written examination of campus recruitment.
+  utter_faq/interview_arrangement:
+    - text: Interview schedules are different for different positions. Except for special arrangements, interviews will be arranged about one week after the written test.
+  utter_faq/interview_times:
+    - text: Under normal circumstances, the business department and the human resources department will arrange an interview at the same time or separately. Some special positions require 2 or more interviews.
+  utter_faq/interview_from:
+    - text: Interviews are generally conducted in the form of individual interviews, but according to the interview arrangements of each company, group interviews will also be conducted.
+  utter_faq/interview_clothing:
+    - text: There is no uniform dress code for the interview, but it is recommended that you try to wear more formal professional attire to participate.
+  utter_faq/interview_paperwork:
+    - text: During the interview, please bring a valid certificate that can prove your identity. For positions with special requirements, please bring the original and copy of the certificate that can prove your professionalism.
+  utter_faq/interview_result:
+    - text: We will notify you of the result of the interview by email or phone.
 actions:
   - utter_goodbye
   - utter_greet
