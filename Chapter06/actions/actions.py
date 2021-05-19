@@ -1,12 +1,7 @@
 import os
-import json
-import os
-from collections import defaultdict
-from typing import Any, Dict, List, Text
+from typing import Text
 
-from rasa_sdk import Action, Tracker, utils
-from rasa_sdk.events import SlotSet
-from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk import utils
 from rasa_sdk.knowledge_base.actions import ActionQueryKnowledgeBase
 from rasa_sdk.knowledge_base.storage import InMemoryKnowledgeBase
 
@@ -16,15 +11,6 @@ if USE_NEO4J:
     from neo4j_knowledge_base import Neo4jKnowledgeBase
 
 
-class EnToZh:
-    def __init__(self, data_file):
-        with open(data_file) as fd:
-            self.data = json.load(fd)
-
-    def __call__(self, key):
-        return self.data.get(key, key)
-
-
 class MyKnowledgeBaseAction(ActionQueryKnowledgeBase):
     def name(self) -> Text:
         return "action_response_query"
@@ -32,20 +18,20 @@ class MyKnowledgeBaseAction(ActionQueryKnowledgeBase):
     def __init__(self):
         if USE_NEO4J:
             print("using Neo4jKnowledgeBase")
-            knowledge_base = Neo4jKnowledgeBase("bolt://localhost:7687", "neo4j", "43215678")
+            knowledge_base = Neo4jKnowledgeBase(
+                "bolt://localhost:7687", "neo4j", "43215678"
+            )
         else:
             print("using InMemoryKnowledgeBase")
             knowledge_base = InMemoryKnowledgeBase("data.json")
 
         super().__init__(knowledge_base)
 
-        self.en_to_zh = EnToZh("en_to_zh.json")
-
     async def utter_objects(
         self,
-        dispatcher: CollectingDispatcher,
-        object_type: Text,
-        objects: List[Dict[Text, Any]],
+        dispatcher,
+        object_type,
+        objects,
     ) -> None:
         """
         Utters a response to the user that lists all found objects.
@@ -55,7 +41,7 @@ class MyKnowledgeBaseAction(ActionQueryKnowledgeBase):
             objects: the list of objects
         """
         if objects:
-            dispatcher.utter_message(text="找到下列{}:".format(self.en_to_zh(object_type)))
+            dispatcher.utter_message(text=f"找到下列{object_type}:")
 
             repr_function = await utils.call_potential_coroutine(
                 self.knowledge_base.get_representation_function_of_object(object_type)
@@ -64,16 +50,14 @@ class MyKnowledgeBaseAction(ActionQueryKnowledgeBase):
             for i, obj in enumerate(objects, 1):
                 dispatcher.utter_message(text=f"{i}: {repr_function(obj)}")
         else:
-            dispatcher.utter_message(
-                text="我没找到任何{}.".format(self.en_to_zh(object_type))
-            )
+            dispatcher.utter_message(text=f"我没找到任何{object_type}.")
 
     def utter_attribute_value(
         self,
-        dispatcher: CollectingDispatcher,
-        object_name: Text,
-        attribute_name: Text,
-        attribute_value: Text,
+        dispatcher,
+        object_name,
+        attribute_name,
+        attribute_value,
     ) -> None:
         """
         Utters a response that informs the user about the attribute value of the
@@ -86,15 +70,9 @@ class MyKnowledgeBaseAction(ActionQueryKnowledgeBase):
         """
         if attribute_value:
             dispatcher.utter_message(
-                text="{}的{}是{}。".format(
-                    self.en_to_zh(object_name),
-                    self.en_to_zh(attribute_name),
-                    self.en_to_zh(attribute_value),
-                )
+                text=f"{object_name}的{attribute_name}是{attribute_value}。"
             )
         else:
             dispatcher.utter_message(
-                text="没有找到{}的{}。".format(
-                    self.en_to_zh(object_name), self.en_to_zh(attribute_name)
-                )
+                text="没有找到{}的{}。".format(object_name, attribute_name)
             )
