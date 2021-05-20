@@ -70,9 +70,9 @@ class MyKnowledgeBaseAction(ActionQueryKnowledgeBase):
         """
         if attribute_value:
             dispatcher.utter_message(
-                text=f"{object_name}'s {attribute_name} is {attribute_value}."
+                text=f"The {attribute_name} of {object_name} is {attribute_value}."
             )
         else:
             dispatcher.utter_message(
-                text=f"I didn't find {object_name}'s {attribute_name}."
+                text=f"I didn't find the {attribute_name} of {object_name}."
             )
