@@ -1,3 +1,4 @@
 rasa[transformers]>2.2.0,<2.3.0
 pytest
 pyowm
+neo4j~=4.1
