@@ -41,7 +41,7 @@ class MyKnowledgeBaseAction(ActionQueryKnowledgeBase):
             objects: the list of objects
         """
         if objects:
-            dispatcher.utter_message(text=f"找到下列{object_type}:")
+            dispatcher.utter_message(text=f"Found the following {object_type}s:")
 
             repr_function = await utils.call_potential_coroutine(
                 self.knowledge_base.get_representation_function_of_object(object_type)
@@ -50,7 +50,7 @@ class MyKnowledgeBaseAction(ActionQueryKnowledgeBase):
             for i, obj in enumerate(objects, 1):
                 dispatcher.utter_message(text=f"{i}: {repr_function(obj)}")
         else:
-            dispatcher.utter_message(text=f"我没找到任何{object_type}.")
+            dispatcher.utter_message(text=f"I didn't find any {object_type}s.")
 
     def utter_attribute_value(
         self,
@@ -70,9 +70,9 @@ class MyKnowledgeBaseAction(ActionQueryKnowledgeBase):
         """
         if attribute_value:
             dispatcher.utter_message(
-                text=f"{object_name}的{attribute_name}是{attribute_value}。"
+                text=f"{object_name}'s {attribute_name} is {attribute_value}."
             )
         else:
             dispatcher.utter_message(
-                text="没有找到{}的{}。".format(object_name, attribute_name)
+                text=f"I didn't find {object_name}'s {attribute_name}."
             )
