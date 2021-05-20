@@ -19,41 +19,41 @@ nlu:
       - Are you there?
   - intent: query_knowledge_base
     examples: |
-      -What nice [song](object_type) is there?
-      -Is there any [singer](object_type) that sings well?
-      -List me some [songs](object_type)
-      -List me some [singer](object_type)
-      -List me some [male](gender)[singer](object_type)
-      -List me some [singer](object_type) of [male](gender)
-      -List me some [female](gender)[singer](object_type)
-      -List me some [singer](object_type) of [female](gender)
-      -List me some [male](gender)[singer](object_type)
-      -List me some [female](gender)[singer](object_type)
-      -Give me [male](gender)[singer](object_type)
-      -Give me [female](gender)[singer](object_type)
-      -List me some [songs](object_type) of [Sting](singer)
-      -List me [Song](object_type) of [Bob Dylan](singer)
-      -List me [songs](object_type) sung by [Bob Dylan](singer)
-      -List [Song](object_type) of [Lady Gaga](singer)
-      -List me [Song](object_type) of [Lady Gaga](singer)
-      -[Michael Jackson] What does (singer) have [song] (object_type)
-      -[Michael Jackson](singer) What is [song](object_type)
-      -[That song] (mention) belongs to what [album](attribute)
-      -[Who] (attribute) sang [that song just now](mention)
-      -Who is the [singer](attribute) of [the previous song](mention)
-      -What [genre](attribute) does [that song](mention) belong to?
-      -What is [style](attribute) of [last](mention)?
-      -What [album](attribute) does [first](mention) belong to?
-      -[Album](attribute) of [First](mention)
-      -[The first](mention) is [who](attribute) sang?
-      -[The last one](mention) is [which](attribute) sang?
-      -[Which singer](attribute) sang [Like a Rolling Stone](song)?
-      -[Billie Jean](song) What [album](attribute) does this song belong to?
-      -[Album](attribute) of [Billie Jean](song)?
-      -[The Shape of My Heart](song) belongs to what [album](attribute)?
-      -[Poker Face](song) is in what [album](attribute)?
-      -[Birthday](attribute) of [First](mention)
-      -[Birthday](attribute) of [Lady Gaga](singer)
+      - What nice [song](object_type) is there?
+      - Is there any [singer](object_type) that sings well?
+      - List me some [songs](object_type)
+      - List me some [singers](object_type)
+      - List me some [male](gender) [singers](object_type)
+      - List me some [singer](object_type) of [male](gender)
+      - List me some [female](gender) [singers](object_type)
+      - List me some [singers](object_type) of [female](gender)
+      - List me some [male](gender) [singers](object_type)
+      - List me some [female](gender) [singers](object_type)
+      - Give me [male](gender) [singers](object_type)
+      - Give me [female](gender) [singers](object_type)
+      - List me some [songs](object_type) of [Sting](singer)
+      - List me [songs](object_type) of [Bob Dylan](singer)
+      - List me [songs](object_type) sung by [Bob Dylan](singer)
+      - List [songs](object_type) of [Lady Gaga](singer)
+      - List me [songs](object_type) of [Lady Gaga](singer)
+      - [Michael Jackson] What does (singer) have [song] (object_type)
+      - [Michael Jackson](singer) What is [song](object_type)
+      - [That song] (mention) belongs to what [album](attribute)
+      - [Who] (attribute) sang [that song just now](mention)
+      - Who is the [singer](attribute) of [the previous song](mention)
+      - What [genre](attribute) does [that song](mention) belong to?
+      - What is [style](attribute) of [last](mention)?
+      - What [album](attribute) does [first](mention) belong to?
+      - [Album](attribute) of [First](mention)
+      - [The first](mention) is [who](attribute) sang?
+      - [The last one](mention) is [which](attribute) sang?
+      - [Which singer](attribute) sang [Like a Rolling Stone](song)?
+      - What [album](attribute) does [Billie Jean](song) belong to?
+      - [Album](attribute) of [Billie Jean](song)?
+      - [The Shape of My Heart](song) belongs to what [album](attribute)?
+      - [Poker Face](song) is in what [album](attribute)?
+      - [Birthday](attribute) of [First](mention)
+      - [Birthday](attribute) of [Lady Gaga](singer)
   - intent: play_song
     examples: |
       - Play this song
