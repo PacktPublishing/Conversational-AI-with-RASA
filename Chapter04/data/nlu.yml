@@ -55,32 +55,32 @@ nlu:
       - [Shanghai](address) [the day after tomorrow](date-time) weather
       - [Next Friday](date-time) at [New York](address)
       - [Tomorrow](date-time) is in [Beijing](address)
-      - [Cairo](address)[Five days later](date-time)
+      - [Cairo](address) [Five days later](date-time)
       - [Next Monday](date-time) is in [Beijing](address)
       - [Today](date-time) is in [Seoul](address)
-      - [Tokyo](address)[tomorrow](date-time)
+      - [Tokyo](address) [tomorrow](date-time)
       - Also [Next Sunday](date-time) in [Seoul](address)
       - About [two days later](date-time) in [Shanghai](address)
       - [Three days later](date-time) is in [Seoul](address)
-      - [Three days later](date-time)[Mumbai](address) Is it cloudy?
-      - [October 3rd](date-time)[Cairo](address) Will it rain?
-      - [Tomorrow](date-time)[Tokyo](address) weather
-      - [Today](date-time)[Tokyo](address) What's the weather like
-      - [Three days later](date-time)[Tokyo](address) weather
-      - What is the weather like in [Beijing](address)[today](date-time)
-      - [Mumbai] (address) [today] (date-time) how is the weather
-      - [Next Friday](date-time)[Tokyo](address) Is the weather fine?
-      - [Today](date-time)[Tokyo](address) how is the weather
-      - [Today](date-time)[Shanghai](address)'s weather
-      - [Two days ago](date-time)[Shanghai](address) What was the weather like
-      - [Tomorrow](date-time)[Beijing](address) I need a raincoat or not
-      - [Next Sunday](date-time)[Beijing](address) Do I need a woolen hat outside?
-      - [Today](date-time)[Beijing](address) Do I need wool socks when I go outside?
-      - [March 5th](date-time)[Beijing](address) Should I wear a coat when I go outside?
+      - [Three days later](date-time) [Mumbai](address) Is it cloudy?
+      - [October 3rd](date-time) [Cairo](address) Will it rain?
+      - [Tomorrow](date-time) [Tokyo](address) weather
+      - [Today](date-time) [Tokyo](address) What's the weather like
+      - [Three days later](date-time) [Tokyo](address) weather
+      - What is the weather like in [Beijing](address) [today](date-time)
+      - [Mumbai](address) [today](date-time) how is the weather
+      - [Next Friday](date-time) [Tokyo](address) Is the weather fine?
+      - [Today](date-time) [Tokyo](address) how is the weather
+      - [Today](date-time) [Shanghai](address)'s weather
+      - [Two days ago](date-time) [Shanghai](address) What was the weather like
+      - [Tomorrow](date-time) [Beijing](address) I need a raincoat or not
+      - [Next Sunday](date-time) [Beijing](address) Do I need a woolen hat outside?
+      - [Today](date-time) [Beijing](address) Do I need wool socks when I go outside?
+      - [March 5th](date-time) [Beijing](address) Should I wear a coat when I go outside?
       - [Next Friday](date-time) Do I need to bring an umbrella in [Berlin](address)
       - [Shanghai](address) [Three days later](date-time) how many degrees
-      - [Tomorrow](date-time)[Shanghai](address) What is the temperature
-      - [Today](date-time)[Shanghai](address) What's the temperature
+      - [Tomorrow](date-time) [Shanghai](address) What is the temperature
+      - [Today](date-time) [Shanghai](address) What's the temperature
       - [Tomorrow](date-time) [New York](address) Is it cold recently?
       - Why is the weather so cool in [Next Monday](date-time) [New York](address)
       - Will it be hot in [Next Sunday](date-time) [New York](address)
@@ -88,42 +88,42 @@ nlu:
       - [Big Apple](address) [afternoon](date-time) weather
       - How is the weather in [capital](address) [tomorrow](date-time)
       - [Big Apple](address) [afternoon](date-time) how is the weather
-      - [Today] (date-time) How is the weather in Taichung?
-      - You know [now] (date-time) is it cold outside
-      - I still want to [January 1st] (date-time)
+      - [Today](date-time) How is the weather in Taichung?
+      - You know [now](date-time) is it cold outside
+      - I still want to [January 1st](date-time)
       - Will it rain later [night](date-time)
       - [Today](date-time) will it be sunny?
-      - [Yesterday] (date-time) how many degrees
+      - [Yesterday](date-time) how many degrees
       - [9/4](date-time) How is the weather
-      - [Tomorrow] (date-time) how much Celsius the weather is
-      - [Today] (date-time) weather
-      - [Yesterday] (date-time) what weather
-      - [Tomorrow] (date-time) Do you want gloves?
-      - [Today] (date-time) Do you want to wear a thin sweater outside?
-      - [Tomorrow] (date-time) Should I bring an umbrella outside?
-      - [Two days later] (date-time) I need rain pants or not
+      - [Tomorrow](date-time) how much Celsius the weather is
+      - [Today](date-time) weather
+      - [Yesterday](date-time) what weather
+      - [Tomorrow](date-time) Do you want gloves?
+      - [Today](date-time) Do you want to wear a thin sweater outside?
+      - [Tomorrow](date-time) Should I bring an umbrella outside?
+      - [Two days later](date-time) I need rain pants or not
       - [Next Monday] Do you need sunglasses outside (date-time)
-      - [Tomorrow] (date-time) will the weather be mild
-      - [Today] (date-time) The weather is very hot
+      - [Tomorrow](date-time) will the weather be mild
+      - [Today](date-time) The weather is very hot
       - [Two days later] Will it be cold on (date-time)?
       - [Tomorrow] Is it warm on (date-time)?
   - intent: info_date
     examples: |
-      - [Tomorrow] (date-time)
+      - [Tomorrow](date-time)
       - [The day after tomorrow](date-time)
-      - How can [Next Sunday] (date-time)
-      - [Yesterday] (date-time) is also needed
-      - I also want [yesterday] (date-time)
-      - [Tomorrow] (date-time) how
-      - [Hou Tian] (date-time) how
-      - [Saturday] (date-time)
-      - [The day after tomorrow] (date-time)
-      - Now [tomorrow] (date-time)
+      - How can [Next Sunday](date-time)
+      - [Yesterday](date-time) is also needed
+      - I also want [yesterday](date-time)
+      - [Tomorrow](date-time) how
+      - [Hou Tian](date-time) how
+      - [Saturday](date-time)
+      - [The day after tomorrow](date-time)
+      - Now [tomorrow](date-time)
       - About [two days later](date-time)
-      - Will it be [the day before yesterday] (date-time)
-      - Also [three days ago] (date-time)
-      - Can you [Next Friday] (date-time)
-      - Also [tomorrow] (date-time)
+      - Will it be [the day before yesterday](date-time)
+      - Also [three days ago](date-time)
+      - Can you [Next Friday](date-time)
+      - Also [tomorrow](date-time)
   - intent: info_address
     examples: |
       - Tell me how about [Rome](address)
