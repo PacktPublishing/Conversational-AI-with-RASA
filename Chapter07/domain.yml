@@ -28,25 +28,25 @@ slots:
     influence_conversation: false
 responses:
   utter_greet:
-    - text: 你好，欢迎使用 iSilly 订票系统。
+    - text: Hello, welcome to Silly booking system.
   utter_goodbye:
-    - text: 再见！
+    - text: Goodbye!
   utter_ask_city_depart:
-    - text: 从哪里出发呢？
+    - text: Where do you start?
   utter_ask_city_arrive:
-    - text: 到哪里去呢？
+    - text: Where to go?
   utter_ask_date:
-    - text: 什么时候出发？
+    - text: When to set off?
   utter_ask_confirm:
-    - text: 确定要购买{date}从{city_depart}出发到{city_arrive}的车票么？
+    - text: Are you sure you want to buy a ticket from {city_depart} to {city_arrive} on {date}?
   utter_ask_confirm_then_no:
-    - text: 好的！
+    - text: Ok!
   utter_ask_confirm_then_yes:
-    - text: 好的，正在为您购买车票！
+    - text: Okay, tickets are being purchased for you!
   utter_api_succeed_true:
-    - text: 订票成功
+    - text: The booking is successful!
   utter_api_succeed_false:
-    - text: 购票 API 出现异常，购买失败，请稍后重试!
+    - text: An exception occurred in the ticket purchase API and the purchase failed. Please try again later!
 actions:
   - action_buy_ticket
   - action_ticket_form_submit

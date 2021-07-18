@@ -39,13 +39,13 @@ slots:
     type: any
 responses:
   utter_greet:
-    - text: 你好，我是 iSilly, 一个可以利用知识图谱帮你查询歌手、音乐和专辑的机器人。
+    - text: Hello, I’m Silly, a robot that can use knowledge graphs to help you look up singers, music, and albums.
   utter_goodbye:
-    - text: 再见！
+    - text: Goodbye！
   utter_default:
-    - text: 系统不明白您说的话
+    - text: The system does not understand what you are saying.
   utter_ask_rephrase:
-    - text: 抱歉系统没能明白您的话，请您重新表述一次
+    - text: Sorry that the system did not understand what you said, please rephrase it again.
 actions:
   - action_response_query
   - utter_goodbye

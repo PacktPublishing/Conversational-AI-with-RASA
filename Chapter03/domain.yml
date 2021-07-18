@@ -15,9 +15,9 @@ slots:
     type: any
 responses:
   utter_greet:
-    - text: 你好，我是 Silly，我可以帮你查询时间、日期和星期几。你可以对我说「现在几点了？」、「今天几号？」或者「明天星期几？」。
+    - text: Hello, I’m Silly, I can check the time, date and day of the week for you. You can ask me "what time is it now?", "what day is today?" or "what day is tomorrow?"
   utter_goodbye:
-    - text: 再见！
+    - text: Goodbye!
 actions:
   - action_query_time
   - action_query_date
