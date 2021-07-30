@@ -3,14 +3,10 @@ nlu:
   - intent: greet
     examples: |
       - Hello
-      - hello
       - Hi
-      - hi
   - intent: goodbye
     examples: |
       - ByeBye
-      - byebye
-      - bye
       - Bye
       - good bye
       - exit
