@@ -9,7 +9,7 @@ stories:
       - intent: goodbye
       - action: utter_goodbye
 rules:
-  - rule: activate restaurant form
+  - rule: activate weather form
     steps:
       - intent: weather
       - action: weather_form
