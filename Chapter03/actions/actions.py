@@ -35,7 +35,7 @@ class ActionQueryTime(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
 
-        current_time = datetime.now().strftime("%H:%M:%S")
+        current_time = datetime.now().strftime("It's %H:%M %p.")
         dispatcher.utter_message(text=current_time)
 
         return []
@@ -60,7 +60,7 @@ class ActionQueryDate(Action):
 
             target_date = current_date + delta
 
-            dispatcher.utter_message(text=target_date.strftime("%Y-%m-%d"))
+            dispatcher.utter_message(text=target_date.strftime("It's %B %d, %Y."))
         else:
             dispatcher.utter_message(text="The system currently doesn't support date query for '{}'".format(text_date))
 
