@@ -1,3 +1,0 @@
-rasa<2.3
-pytest
-pyowm
