@@ -4,17 +4,13 @@ nlu:
     examples: |
       - Bye
       - Goodbye
-      - Bye
       - drop out
       - the end
   - intent: greet
     examples: |
       - Hello there
       - Hello
-      - Hello
-      - hello
       - Hi
-      - hi
       - Hey
       - Are you there?
   - intent: query_knowledge_base

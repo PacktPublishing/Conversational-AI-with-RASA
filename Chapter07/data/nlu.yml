@@ -9,7 +9,6 @@ nlu:
       - Hello there
       - Hello
       - Hi
-      - hi
       - Hey
       - Are you there?
   - intent: affirm
