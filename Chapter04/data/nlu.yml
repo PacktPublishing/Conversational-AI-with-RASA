@@ -10,9 +10,7 @@ nlu:
     examples: |
       - Hello there
       - Hello
-      - hello
       - Hi
-      - hi
       - Hey
       - Are you there?
   - intent: weather
