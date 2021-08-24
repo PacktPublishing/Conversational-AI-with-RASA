@@ -1,3 +1,8 @@
+## Training Rasa models
+```shell
+rasa train
+```
+
 ## Start Rasa action server with OWM key
 ```shell
 OWM_KEY=xxx rasa run actions
