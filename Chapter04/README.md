@@ -1,3 +1,11 @@
+## installation
+
+Beside rasa, you also need install `pyowm`:
+
+```bash
+pip install pyowm
+```
+
 ## Training Rasa models
 ```shell
 rasa train
