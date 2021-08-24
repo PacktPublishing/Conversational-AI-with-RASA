@@ -1,0 +1,5 @@
+rules:
+  - rule: respond to FAQs
+    steps:
+    - intent: faq
+    - action: utter_faq
