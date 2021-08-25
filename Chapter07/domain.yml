@@ -9,11 +9,27 @@ intents:
   - deny
   - book_ticket:
       use_entities: [ ]
+  - book_drinks
   - info_city
   - info_date
 entities:
-  - city
+  - city:
+      roles:
+        - departure
+        - destination
   - date
+  - ingredient:
+      groups:
+        - 1
+        - 2
+  - size:
+      groups:
+        - 1
+        - 2
+  - drink:
+      groups:
+        - 1
+        - 2 
 slots:
   api_succeed:
     type: bool
@@ -48,31 +64,5 @@ responses:
   utter_api_succeed_false:
     - text: An exception occurred in the ticket purchase API and the purchase failed. Please try again later!
 actions:
-  - action_buy_ticket
-  - action_ticket_form_submit
-  - utter_greet
-  - utter_goodbye
-  - utter_ask_confirm
-  - utter_ask_confirm_then_no
-  - utter_ask_confirm_then_yes
-  - utter_api_succeed_true
-  - utter_api_succeed_false
-forms:
-  ticket_form:
-    city_depart:
-      - type: from_entity
-        entity: city
-        role: departure
-      - type: from_entity
-        entity: city
-        intent: info_city
-    city_arrive:
-      - type: from_entity
-        entity: city
-        role: destination
-      - type: from_entity
-        entity: city
-        intent: info_city
-    date:
-      - type: from_entity
-        entity: date
+  - action_drink_response
+  - action_ticket_response
