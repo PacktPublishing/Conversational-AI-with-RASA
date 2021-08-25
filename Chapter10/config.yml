@@ -1,0 +1,21 @@
+version: "2.0"
+language: en
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: LanguageModelFeaturizer
+    model_name: "bert"
+    model_weights: "rasa/LaBSE"
+  - name: RegexFeaturizer
+  - name: DIETClassifier
+    epochs: 100
+    learning_rate: 0.001
+  - name: ResponseSelector
+    epochs: 100
+    learning_rate: 0.001
+  - name: EntitySynonymMapper
+  - name: FallbackClassifier
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    epochs: 100
+  - name: RulePolicy

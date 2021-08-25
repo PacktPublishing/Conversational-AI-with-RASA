@@ -1,0 +1,49 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - goodbye
+  - greet
+  - weather
+  - info_date
+  - info_address
+entities:
+  - address
+  - date-time
+slots:
+  address:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  date-time:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  requested_slot:
+    type: any
+responses:
+  utter_greet:
+    - text: Hello, please tell us where and when we need to provide weather forecast services
+  utter_goodbye:
+    - text: Goodbye!
+  utter_ask_address:
+    - text: Where?
+  utter_ask_date-time:
+    - text: When?
+  utter_default:
+    - text: Sorry, The system does not understand what you are saying
+actions:
+  - utter_ask_address
+  - utter_ask_date-time
+  - utter_goodbye
+  - utter_greet
+  - utter_default
+  - action_weather_form_submit
+forms:
+  weather_form:
+    address:
+      - entity: address
+        type: from_entity
+    date-time:
+      - entity: date-time
+        type: from_entity
