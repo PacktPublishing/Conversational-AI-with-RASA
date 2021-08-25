@@ -11,6 +11,16 @@ smoke_test:
 	(cd Chapter06 && rasa train)
 	(cd Chapter07 && rasa train)
 
+.PHONY: clean_models
+clean_models:
+	(cd Chapter02 && rm -rf models)
+	(cd Chapter03 && rm -rf models)
+	(cd Chapter04 && rm -rf models)
+	(cd Chapter05 && rm -rf models)
+	(cd Chapter06 && rm -rf models)
+	(cd Chapter07 && rm -rf models)
+
+
 .PHONY: clean
 clean:
     ## remove Python file artifacts
