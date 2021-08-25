@@ -1,0 +1,1 @@
+Goto `chatette` sub directory to see the demo of usage of chatette.
