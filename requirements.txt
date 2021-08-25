@@ -1,4 +1,5 @@
-rasa[transformers]>2.2.0,<2.3.0
+# fix Rasa version to 2.8.X
+rasa[transformers]== 2.8.*
 pytest
 pyowm
 neo4j~=4.1

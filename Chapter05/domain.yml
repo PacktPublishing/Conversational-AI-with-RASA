@@ -9,7 +9,7 @@ intents:
   - faq
 responses:
   utter_greet:
-    - text: Hello, I’m Silly. I’m a Rasa-based FAQ robot. I can help you with answering questions about the recruitment of fresh graduates for The Silly Company.
+    - text: Hello, I’m Silly. I’m a Rasa-based FAQ bot. I can help you with answering questions about the recruitment of fresh graduates for The Silly Company.
   utter_goodbye:
     - text: Goodbye!
   utter_default:

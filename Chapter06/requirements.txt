@@ -1,3 +1,0 @@
-rasa[transformers]==2.1.1
-jieba==0.42.1
-neo4j~=4.1

@@ -1,8 +1,13 @@
-import datetime
 import os
+import datetime
 from typing import Dict, Optional
 
-from requests import ConnectionError, HTTPError, Timeout, TooManyRedirects
+import requests
+import json
+from requests import ConnectionError, HTTPError, TooManyRedirects, Timeout
+
+UNIT = "c"  # 温度单位
+LANGUAGE = "zh-Hans"  # 查询结果的返回语言
 
 owm_api_key = os.getenv("OWM_KEY", "")  # API key
 assert owm_api_key
@@ -52,17 +57,13 @@ def fetch_weather(lat: float, lon: float) -> Dict[datetime.date, WeatherConditio
     return daily_weather
 
 
-def get_weather_by_date(
-    lat: float, lon: float, day: datetime.date
-) -> Optional[WeatherCondition]:
+def get_weather_by_date(lat: float, lon: float, day: datetime.date) -> Optional[WeatherCondition]:
     result = fetch_weather(lat, lon)
 
     return result.get(day)
 
 
-def get_text_weather_date(
-    lat: float, lon: float, date: datetime.date, text_date: str, text_city: str
-) -> str:
+def get_text_weather_date(lat: float, lon: float, date: datetime.date, text_date: str, text_city: str) -> str:
     try:
         result = get_weather_by_date(lat, lon, date)
     except (ConnectionError, HTTPError, TooManyRedirects, Timeout) as e:
@@ -75,7 +76,7 @@ def get_text_weather_date(
             date=date,
             status=result.status,
             temp_min=result.temp_min,
-            temp_max=result.temp_max,
+            temp_max=result.temp_max
         )
 
     return text_message

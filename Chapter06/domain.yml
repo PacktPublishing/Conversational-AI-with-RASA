@@ -39,7 +39,7 @@ slots:
     type: any
 responses:
   utter_greet:
-    - text: Hello, I’m Silly, a robot that can use knowledge graphs to help you look up singers, music, and albums.
+    - text: Hello, I’m Silly, a bot that can use knowledge graphs to help you look up singers, music, and albums.
   utter_goodbye:
     - text: Goodbye！
   utter_default:

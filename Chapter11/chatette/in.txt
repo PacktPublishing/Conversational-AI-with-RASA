@@ -1,0 +1,12 @@
+%[weather_query]
+	[What's|how about] the weather @[date] in @[city]?
+
+@[date]
+	today
+	tomorrow
+
+@[city]
+	New York
+	Shanghai
+	London
+
