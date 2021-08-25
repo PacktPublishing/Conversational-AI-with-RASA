@@ -8,45 +8,53 @@ stories:
     steps:
       - intent: goodbye
       - action: utter_goodbye
-  - story: form
-    steps:
-      - intent: book_ticket
-      - action: ticket_form
-      - active_loop: ticket_form
-      - intent: deny
-      - action: utter_ask_confirm_then_no
-  - story: buy ticket successed
-    steps:
-      - intent: book_ticket
-      - action: ticket_form
-      - active_loop: ticket_form
-      - intent: affirm
-      - action: utter_ask_confirm_then_yes
-      - action: action_buy_ticket
-      - slot_was_set:
-          - api_succeed: true
-      - action: utter_api_succeed_true
-  - story: buy ticket failed
-    steps:
-      - intent: book_ticket
-      - action: ticket_form
-      - active_loop: ticket_form
-      - intent: affirm
-      - action: utter_ask_confirm_then_yes
-      - action: action_buy_ticket
-      - slot_was_set:
-          - api_succeed: false
-      - action: utter_api_succeed_false
+#  - story: form
+#    steps:
+#      - intent: book_ticket
+#      - action: ticket_form
+#      - active_loop: ticket_form
+#      - intent: deny
+#      - action: utter_ask_confirm_then_no
+#  - story: buy ticket successed
+#    steps:
+#      - intent: book_ticket
+#      - action: ticket_form
+#      - active_loop: ticket_form
+#      - intent: affirm
+#      - action: utter_ask_confirm_then_yes
+#      - action: action_buy_ticket
+#      - slot_was_set:
+#          - api_succeed: true
+#      - action: utter_api_succeed_true
+#  - story: buy ticket failed
+#    steps:
+#      - intent: book_ticket
+#      - action: ticket_form
+#      - active_loop: ticket_form
+#      - intent: affirm
+#      - action: utter_ask_confirm_then_yes
+#      - action: action_buy_ticket
+#      - slot_was_set:
+#          - api_succeed: false
+#      - action: utter_api_succeed_false
 rules:
-  - rule: Submit form
-    condition:
-      # Condition that form is active.
-      - active_loop: ticket_form
+#  - rule: Submit form
+#    condition:
+#      # Condition that form is active.
+#      - active_loop: ticket_form
+#    steps:
+#      - action: ticket_form
+#      - active_loop: null
+#      - slot_was_set:
+#          - requested_slot: null
+#      # The action we want to run when the form is submitted.
+#      - action: action_ticket_form_submit
+#    wait_for_user_input: false
+  - rule: handle drink query
     steps:
-      - action: ticket_form
-      - active_loop: null
-      - slot_was_set:
-          - requested_slot: null
-      # The action we want to run when the form is submitted.
-      - action: action_ticket_form_submit
-    wait_for_user_input: true
+      - intent: book_drinks
+      - action: action_drink_response
+  - rule: handle ticket query
+    steps:
+      - intent: book_ticket
+      - action: action_ticket_response

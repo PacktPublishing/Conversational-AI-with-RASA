@@ -47,14 +47,19 @@ nlu:
       - Help me book a ticket from [New York]{"entity": "city", "role": "departure"}
       - Help me book a ticket from [Paris]{"entity": "city", "role": "departure"}
       - Help me book a ticket from [Paris]{"entity": "city", "role": "departure"} to [Madrid]{"entity": "city", "role": "destination"}
-      - Help me order one from [Tomorrow](date) [New York]{"entity": "city", "role": "departure"} to [Berlin]{"entity": "city", "role": " destination"}'s ticket
-      - Order me a [Tomorrow](date) [San Francisco]{"entity": "city", "role": "departure"} to [London]{"entity": "city", "role": " destination"}'s ticket
-      - Help me order a [Tomorrow](date) [Berlin]{"entity": "city", "role": "departure"} to [Paris]{"entity": "city", "role": " destination"}'s ticket
+      - Help me order one ticket from [New York]{"entity": "city", "role": "departure"} to [Berlin]{"entity": "city", "role": " destination"} [tomorrow](date)
+      - Order me a ticket from [San Francisco]{"entity": "city", "role": "departure"} to [London]{"entity": "city", "role": " destination"} [tomorrow](date)
+      - Help me order a ticket from [Berlin]{"entity": "city", "role": "departure"} to [Paris]{"entity": "city", "role": " destination"} [tomorrow](date)
       - Book me a ticket for [tomorrow](date)
       - Help me book a ticket to [Madrid]{"entity": "city", "role": "destination"}
       - Book me a ticket to [London]{"entity": "city", "role": "destination"}
       - Help me book a ticket departing from [Los Angeles]{"entity": "city", "role": "departure"}
       - Book me a ticket to [Berlin]{"entity": "city", "role": "destination"}
+  - intent: book_drinks
+    examples: |
+      - One [large cup]{"entity": "size", "group": "1"} of [Cola]{"entity": "drink", "group":"1"} [with ice]{"entity": "ingredient", "group": "1"}. Another one is [medium cup]{"entity": "size", "group": "2"} of Fanta [without ice] {"entity": "ingredient", "group": "2"}
+      - One [small cup]{"entity": "size", "group": "1"} of [Fanta]{"entity": "drink", "group":"1"} [without ice]{"entity": "ingredient", "group": "1"}. One [medium cup]{"entity": "size", "group": "2"} of [Fanta]{"entity": "drink", "group":"2"} [with ice]{"entity": "ingredient", "group": "2"}
+      - One [large cup]{"entity": "size", "group": "1"} of [Cola]{"entity": "drink", "group":"1"} . Another one is [medium cup]{"entity": "size", "group": "2"} of [Fanta]{"entity": "drink", "group":"2"} .The former one [with ice]{"entity": "ingredient", "group": "1"}, and the latter one  [without ice]{"entity": "ingredient", "group": "2"}
   - synonym: today
     examples: |
       - Morning
@@ -63,4 +68,3 @@ nlu:
       - in the afternoon
       - In the evening
       - Today
-
