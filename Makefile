@@ -1,7 +1,3 @@
-install:
-	pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
-	pip install -r ./requirements.txt
-
 .PHONY: smoke_test
 smoke_test:
 	(cd Chapter02 && rasa train)
@@ -10,6 +6,9 @@ smoke_test:
 	(cd Chapter05 && rasa train)
 	(cd Chapter06 && rasa train)
 	(cd Chapter07 && rasa train)
+	(cd Chapter08 && rasa train)
+
+	$(MAKE) clean_models
 
 .PHONY: clean_models
 clean_models:
@@ -19,6 +18,7 @@ clean_models:
 	(cd Chapter05 && rm -rf models)
 	(cd Chapter06 && rm -rf models)
 	(cd Chapter07 && rm -rf models)
+	(cd Chapter08 && rm -rf models)
 
 
 .PHONY: clean
