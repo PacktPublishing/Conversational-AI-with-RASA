@@ -86,6 +86,9 @@ nlu:
   - synonym: album
     examples: |
       - Album
+  - synonym: song
+    examples: |
+      - songs
   - synonym: '4'
     examples: |
       - the fourth
