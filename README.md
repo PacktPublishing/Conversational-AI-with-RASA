@@ -9,7 +9,7 @@ This is the code repository for [Conversational AI with Rasa](https://www.packtp
 ## What is this book about?
 Rasa provides an open-source framework for developing AI chatbots that uses natural language processing (NLP) and machine learning technologies. With this book, you'll become well-versed with all that Rasa offers to help you build a next-level customer experience at scale.
 
-This book covers the following exciting features: <First 5 What you'll learn points>
+This book covers the following exciting features: 
 * Use the response selector to handle chitchat and FAQs
 * Create custom actions using the Rasa SDK
 * Train Rasa to handle complex named entity recognition
