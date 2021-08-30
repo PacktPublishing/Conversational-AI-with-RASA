@@ -52,5 +52,5 @@ Try to type some queries like `List me some songs of Sting` and see the response
 Have Fun!
 
 
-## Explorer Graph
+## Explore Graph
 After starting Neo4j, you can use the Neo4j browser to perform visualization and GraphQL debugging by visiting http://localhost:7474 , use `neo4j` as username and password.
