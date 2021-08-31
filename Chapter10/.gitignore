@@ -1,2 +1,5 @@
 models/
 story_graph.dot
+# generated from Rasa X
+events.db*
+rasa.db
