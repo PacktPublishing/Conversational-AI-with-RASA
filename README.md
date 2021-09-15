@@ -45,7 +45,7 @@ slots:
         
 * In Chapter 4, page 102, second paragraph should be:
 
-RulePolicy gives the corresponding intents restat, back, and session_start for the session-level actions action_start, action_back, and action_session_start, and manages the mapping from intent to action so that session-level control can be done when system gets the intents and triggers the corresponding actions.
+RulePolicy gives the corresponding intents restart, back, and session_start for the session-level actions action_start, action_back, and action_session_start, and manages the mapping from intent to action so that session-level control can be done when system gets the intents and triggers the corresponding actions.
 
 **Following is what you need for this book:**
 This book is for NLP professionals as well as machine learning and deep learning practitioners who have knowledge of natural language processing and want to build chatbots with Rasa. Anyone with beginner-level knowledge of NLP and deep learning will be able to get the most out of the book.	
